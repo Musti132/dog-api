@@ -13,6 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [\App\Http\Controllers\DogController::class, 'index']);
+Route::get('/grab', [\App\Http\Controllers\DogController::class, 'get']);
